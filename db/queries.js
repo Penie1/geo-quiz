@@ -1,6 +1,7 @@
-const pool = require("./pool");
+const db = require("./pool");
+
 const getAllCapitals = async () => {
-  const { rows } = await pool.query("SELECT * FROM captial");
+  const { rows } = await db.query("SELECT * FROM capital");
   return rows;
 };
 

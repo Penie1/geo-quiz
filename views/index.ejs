@@ -168,14 +168,21 @@
     </svg>
     <h1>Countries and Capitals Quiz</h1>
     <form action="/" method="post">
-      <span class="score">Total Score: 0</span>
+      <span class="score">Total Score: <%=totalScore%></span>
       <div>
         <label for="capital"
-          >What is <span class="country">Ethiopia's</span> capital city?</label
+          >What is <span class="country"><%=country%>'s</span> capital
+          city?</label
         >
         <input type="text" name="capital" />
       </div>
       <button>Submit</button>
     </form>
+
+    <% if (locals.isGameOver) { %>
+    <script>
+      alert("Game over!");
+    </script>
+    <% } %>
   </body>
 </html>
