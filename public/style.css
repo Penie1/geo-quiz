@@ -9,10 +9,91 @@ html {
 }
 
 body {
+  text-align: center;
+  padding: 0 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: rgb(250, 250, 250);
   min-height: 100dvh;
 }
+
+body,
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+body,
+.score {
+  background-color: rgb(58, 57, 57);
+}
+.country,
+.score {
+  font-weight: bold;
+  color: rgb(255, 187, 0);
+}
 #background {
+  opacity: 0.4;
   position: absolute;
+  top: 0;
+  z-index: -9;
   height: 100%;
   width: 100%;
+}
+button {
+  cursor: pointer;
+}
+h1 {
+  font-size: 1.7rem;
+  color: rgb(210, 208, 208);
+  margin-block: 0px 70px;
+}
+.score {
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 20px;
+}
+form {
+  position: relative;
+  overflow: hidden;
+  gap: 40px;
+  height: 500px;
+  border-radius: 15px;
+  padding: 20px 10px;
+  background-color: rgba(74, 79, 231, 0.697);
+  max-width: 500px;
+  width: 100%;
+}
+label {
+  display: block;
+  margin-bottom: 20px;
+  font-size: 1.5rem;
+}
+input[type="text"] {
+  border-radius: 10px;
+  text-align: center;
+  font-size: 1.2rem;
+  height: 30px;
+  width: 75%;
+  margin: 0 auto;
+}
+
+button {
+  font: inherit;
+  font-size: 1rem;
+  padding: 10px 50px;
+}
+
+@media only screen and (min-width: 500px) {
+  label {
+    font-size: 2rem;
+  }
+  button {
+    font-size: 1.3rem;
+  }
+  input[type="text"] {
+    height: 50px;
+    font-size: 1.5rem;
+  }
 }
